@@ -37,7 +37,7 @@ def plot_NASA_NTL(df, gdf, date: str, variable: str, title_prefix: str, source: 
         df[variable].sel(time=date).plot.pcolormesh(ax=ax, cmap=cmap, vmin=vmin, vmax=vmax)
     
     # Add basemap
-    cx.add_basemap(ax, crs=gdf.crs.to_string())
+    cx.add_basemap(ax, crs=gdf.crs.to_string(), source=cx.providers.CartoDB.Positron)
     
     ax.text(
         0,
