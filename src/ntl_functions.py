@@ -103,3 +103,30 @@ def mask_dataset_by_geometry(dataset, gdf):
 
     # Apply mask to all data variables
     return dataset.where(mask_da)
+
+def yearly_radiance(dataset, years, var="NearNadir_Composite_Snow_Free"):
+    """
+    Calculates the yearly radiance for a specific sum of years for the Xarray variable chosen.
+    
+    dataset: The xarray dataset to process.
+    years: The list of years to calculate radiance for.
+    var: The variable name in the dataset to calculate radiance for.
+    """
+    return [
+        round(dataset[var].sel(time=f"{y}-01-01").sum().item(), 1)
+        for y in years
+    ]
+
+def yearly_nonzero_pixels(dataset, years, var="NearNadir_Composite_Snow_Free"):
+    """
+    Calculates the number of nonzero pixels for a specific sum of years for the Xarray variable chosen.
+    
+    dataset: The xarray dataset to process.
+    years: The list of years to calculate nonzero pixels for.
+    var: The variable name in the dataset to calculate nonzero pixels for.
+    """
+    return [
+        (dataset[var].sel(time=f"{y}-01-01") > 0).sum().item()
+        for y in years
+    ]
+

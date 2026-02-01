@@ -19,5 +19,8 @@ data/
 *.csv
 *.xlsx
 
+output/
+*.png
+
 # Virtual envs
 .env/
