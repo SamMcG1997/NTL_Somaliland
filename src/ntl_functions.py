@@ -6,7 +6,6 @@ import xarray as xr
 import rioxarray
 import rasterio.features
 
-#Graph Functions
 def plot_NASA_NTL(df, gdf, date: str, variable: str, title_prefix: str, source: str = "VNP46A4", cmap: str = "Spectral", 
                   robust: bool = True, vmin: float = None, vmax: float = None):
     """
@@ -52,7 +51,6 @@ def plot_NASA_NTL(df, gdf, date: str, variable: str, title_prefix: str, source: 
     )
     ax.set_title(f"{title_prefix}: {date}", fontsize=16)
     plt.axis("off")
-
 
 def filter_dataset_by_bounding_box(dataset, shapefile):
     """
