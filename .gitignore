@@ -19,7 +19,7 @@ data/
 *.csv
 *.xlsx
 
-output/
+output/Graphics
 *.png
 
 # Virtual envs
