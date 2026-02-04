@@ -16,6 +16,9 @@ env/
 
 # Data
 #data/NTL_Data_A4
+*nc
+*tif
+*csv
 
 #Maps & Graphs
 output/Graphics
