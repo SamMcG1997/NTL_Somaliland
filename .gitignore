@@ -15,7 +15,7 @@ env/
 .vscode/
 
 # Data
-data/NTL_Data_A4
+#data/NTL_Data_A4
 
 #Maps & Graphs
 output/Graphics
