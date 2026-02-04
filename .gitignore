@@ -15,12 +15,12 @@ env/
 .vscode/
 
 # Data
-data/
+data/NTL_Data_A4
 *.csv
 *.xlsx
 
+#Maps & Graphs
 output/Graphics
-*.png
 
 # Virtual envs
 .env/
