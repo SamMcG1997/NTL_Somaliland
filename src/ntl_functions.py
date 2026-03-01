@@ -5,6 +5,8 @@ import geopandas as gpd
 import xarray as xr
 import rioxarray
 import rasterio.features
+from datetime import datetime, timedelta
+
 
 def plot_NASA_NTL(df, gdf, date: str, variable: str, title_prefix: str, source: str = "VNP46A4", cmap: str = "Spectral", 
                   robust: bool = True, vmin: float = None, vmax: float = None):
@@ -128,3 +130,38 @@ def yearly_nonzero_pixels(dataset, years, var="NearNadir_Composite_Snow_Free"):
         for y in years
     ]
 
+def parse_vdn_files(file_string, utc_offset=0):
+    # Clean up the raw string and split into filenames
+    files = file_string.strip("b'").strip("'").split(",")
+    
+    results = []
+    for f in files:
+        filename = f.split("/")[-1]  # just the filename, not the full path
+        
+        # Only keep NPP_VDNES_L1 files
+        if "NPP_VDNES_L1" in filename:
+            try:
+                # Example: NPP_VDNES_L1.A2012194.2212.001.2016312152556.hdf
+                parts = filename.split(".")
+                date_code = parts[1]   # A2012194
+                time_code = parts[2]   # 2212
+                
+                # Convert date and time
+                year = int(date_code[1:5])       # 2012
+                day_of_year = int(date_code[5:]) # 194
+                hour = int(time_code[:2])        # 22
+                minute = int(time_code[2:])      # 12
+                
+                obs_time = datetime.strptime(f"{year}{day_of_year:03d} {hour:02d}{minute:02d}", "%Y%j %H%M")
+                local_time = obs_time + timedelta(hours=utc_offset)
+
+                
+                results.append({
+                    "filename": filename,
+                    "observation_time_utc": obs_time.strftime("%Y-%m-%d %H:%M"),
+                    "local_time": local_time.strftime("%Y-%m-%d %H:%M")
+                })
+            except Exception as e:
+                print(f"Could not parse {filename}: {e}")
+    
+    return results
