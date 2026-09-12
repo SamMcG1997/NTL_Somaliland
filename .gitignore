@@ -26,3 +26,6 @@ output/Graphics
 # Virtual envs
 .env/
 .env
+
+# MyST build outputs
+_build
