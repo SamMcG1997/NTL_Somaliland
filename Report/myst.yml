@@ -14,7 +14,6 @@ project:
     - file: 06_gdp_estimates.md
     - file: 07_discussion.md
     - file: annexes.md
-    - file: bibliography.md
 
   bibliography:
     - references.bib
