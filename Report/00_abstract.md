@@ -1,3 +1,10 @@
+# Nighttime Lights in Somaliland. 
+
+## Authors: Sam McGuire & Phillip Wichmann
+We have used NASA satellite data to explore the change in the amounts of nighttime lights emitted in Somaliland from 2012 to 2023. We have used this data to explore how economic activity, proxied by nighttime lights, is distrubuted across Somaliland and to explore potential GDP levels. 
+
+
+
 # Abstract
 Somaliland, unrecognised internationally[^fn1], has remained relatively stable since declaring independence in 1991. Somaliland is largely unable to access international funding and thus investments have been driven by the national budget and private investment. However, Somaliland’s government spending is constrained to a yearly budget of around $258m USD (2024), which is mostly spent on salaries. Thus there has been limited fiscal space for government investment in economic development, with development sourced primarily from the private sector, diaspora, and deals with foreign companies such as DP World.
 

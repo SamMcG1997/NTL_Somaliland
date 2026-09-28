@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 def plot_NASA_NTL(df, gdf, date: str, variable: str, title_prefix: str, source: str = "VNP46A4", cmap: str = "Spectral", 
                   robust: bool = True, vmin: float = None, vmax: float = None):
     """
-    Plots a specified variable for a given year from the dataset.
+    Plots NTL for a given year from the NASA NTL data.
 
     Args:
     df (xarray.Dataset): The dataset containing the data to be plotted.
