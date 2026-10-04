@@ -19,4 +19,4 @@ project:
     - references.bib
 
 site:
-  template: article-theme
+  template: book-theme
