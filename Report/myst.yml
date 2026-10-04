@@ -1,8 +1,8 @@
 version: 1
 
 project:
-  title: "Nighttime Lights Analysis – Somaliland"
-  description: "Satellite-derived nighttime lights analysis of economic activity in Somaliland, 2012–2023."
+  title: "Night-Time Lights in Somaliland across time 2012-2023"
+  description: "Analysis of the change in satellite-derived nighttime lights across Somaliland, 2012–2023."
 
   toc:
     - file: 00_abstract.md
@@ -19,4 +19,4 @@ project:
     - references.bib
 
 site:
-  template: book-theme
+  template: article-theme

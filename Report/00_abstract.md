@@ -1,8 +1,7 @@
-# Nighttime Lights in Somaliland. 
+# Night-Time Lights in Somaliland across time 2012-2023. 
 
 # Authors: Sam McGuire & Phillip Wichmann
 We have used NASA satellite data to explore the change in the amounts of nighttime lights emitted in Somaliland from 2012 to 2023. We have used this data to explore how economic activity, proxied by nighttime lights, is distrubuted across Somaliland and to explore potential GDP levels. 
-
 
 
 # Abstract
