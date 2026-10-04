@@ -7,6 +7,8 @@ The analysis is conducted at three spatial levels:
 * Regional
 * Urban / city level
 
+Our paper can be found [here](https://sammcg1997.github.io/NTL_Somaliland/).
+
 ## Data Sources
 
 * VIIRS Data (VNP46A4) Annual Composites
